@@ -754,6 +754,20 @@ h3.my-profession {
   padding: 0 50px;
 }
 
+/* The little profile picture */
+.profile-pic {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  margin-top: 20px;
+}
+
+.profile-pic img {
+  width: 60px;
+  border-radius: 50%;
+}
+
 @media (max-width: 1199px) {
   .section .container {
     padding-top: 70px;
@@ -805,6 +819,19 @@ h3.my-profession {
 
   .home .home-img {
     display: none;
+  }
+
+  .profile-pic {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-top: 20px;
+  }
+
+  .profile-pic img {
+    width: 60px;
+    border-radius: 50%;
   }
 }
 
