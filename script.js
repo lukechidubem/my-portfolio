@@ -97,3 +97,45 @@ function asideSectionTogglerBtn() {
     allSection[i].classList.toggle("open");
   }
 }
+
+// ================= List of Projects ==================
+const allProjects = document.querySelector(".project-list");
+
+const projects = [
+  {
+    name: "A Tour Aplication",
+    img: "images/Tour.png",
+    link: "https://tours-9w4s.onrender.com",
+  },
+  {
+    name: "An E-commerce Aplication",
+    img: "images/E-commerce.png",
+    link: "https://lukesecommerce.onrender.com",
+  },
+  {
+    name: "Everyday Todo Aplication",
+    img: "images/Todo.png",
+    link: "https://lukestodo.onrender.com/",
+  },
+];
+
+projects.map((project) => {
+  const div = document.createElement("div");
+  div.classList.add("portfolio-item");
+  div.classList.add("padd-15");
+
+  div.innerHTML = `
+              
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href=${project.link}>
+                      <img src=${project.img} alt="" />
+                      <h3>${project.name}</h3>
+                    </a>
+                  </div>
+                </div>
+              
+`;
+
+  allProjects.appendChild(div);
+});

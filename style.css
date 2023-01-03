@@ -665,6 +665,12 @@ h3.my-profession {
   display: block;
 }
 
+.portfolio .portfolio-item-inner .portfolio-img h3 {
+  background-color: white;
+  padding: 3px 10px;
+  color: var(--skin-color);
+}
+
 /* Contact */
 .contact-title {
   color: var(--skin-color);
