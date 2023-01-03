@@ -847,4 +847,16 @@ h3.my-profession {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
+  .aside {
+    width: 190px;
+  }
+
+  .section.open {
+    left: 189px;
+  }
+
+  .aside .nav-toggler.open {
+    left: 210px;
+  }
 }
