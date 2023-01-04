@@ -169,6 +169,12 @@ form.addEventListener("submit", async (event) => {
       messageSent.textContent = "Message sent successfully";
       messageSent.style.color = "green";
 
+      document.querySelector("#name").value =
+        document.querySelector("#email").value =
+        document.querySelector("#subject").value =
+        document.querySelector("#message").value =
+          "";
+
       window.setTimeout(() => {
         messageSent.textContent = "";
       }, 5000);
@@ -183,6 +189,5 @@ form.addEventListener("submit", async (event) => {
   } catch (err) {
     console.error(err);
   }
-
-  name = message = email = subject = "";
+  document.querySelector("#name").value = "";
 });
