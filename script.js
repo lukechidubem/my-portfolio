@@ -139,3 +139,50 @@ projects.map((project) => {
 
   allProjects.appendChild(div);
 });
+
+// ================= Contact Form ==================
+const form = document.querySelector("#contactForm");
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  let name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let subject = document.querySelector("#subject").value;
+  let message = document.querySelector("#message").value;
+  const messageSent = document.querySelector(".message-sent");
+
+  try {
+    const res = await fetch(
+      "https://tours-9w4s.onrender.com/api/v1/users/contactUs",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, subject, message }),
+      }
+    );
+
+    console.log(res);
+    if (res.status === 201) {
+      messageSent.textContent = "Message sent successfully";
+      messageSent.style.color = "green";
+
+      window.setTimeout(() => {
+        messageSent.textContent = "";
+      }, 5000);
+    } else {
+      messageSent.textContent = "Please provide a valid email and name!";
+      messageSent.style.color = "red";
+
+      window.setTimeout(() => {
+        messageSent.textContent = "";
+      }, 5000);
+    }
+  } catch (err) {
+    console.error(err);
+  }
+
+  name = message = email = subject = "";
+});
