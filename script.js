@@ -2,7 +2,7 @@
 let typed = new Typed(".typing", {
   strings: [
     "",
-    "Web Developer2",
+    "Web Developer",
     "Web Designer",
     "Mobile App Developer",
     "Full-Stack Developer",
@@ -115,7 +115,7 @@ const projects = [
   {
     name: "Everyday Todo Aplication",
     img: "images/Todo.png",
-    link: "https://lukestodo.onrender.com/",
+    // link: "https://lukestodo.onrender.com/",
   },
 ];
 
