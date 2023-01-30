@@ -731,6 +731,10 @@ h3.my-profession {
   padding: 5px;
 }
 
+.message-sent-btn {
+  cursor: pointer;
+}
+
 .contact .contact-form {
   flex: 0 0 100%;
   max-width: 100%;
