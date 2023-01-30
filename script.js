@@ -2,7 +2,7 @@
 let typed = new Typed(".typing", {
   strings: [
     "",
-    "Web Developer",
+    "Web Developer2",
     "Web Designer",
     "Mobile App Developer",
     "Full-Stack Developer",
@@ -105,7 +105,7 @@ const projects = [
   {
     name: "A Tour Aplication",
     img: "images/Tour.png",
-    link: "https://tours-9w4s.onrender.com",
+    // link: "https://tours-9w4s.onrender.com",
   },
   {
     name: "An E-commerce Aplication",
@@ -141,53 +141,53 @@ projects.map((project) => {
 });
 
 // ================= Contact Form ==================
-const form = document.querySelector("#contactForm");
+// const form = document.querySelector("#contactForm");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
+// form.addEventListener("submit", async (event) => {
+//   event.preventDefault();
 
-  let name = document.querySelector("#name").value;
-  let email = document.querySelector("#email").value;
-  let subject = document.querySelector("#subject").value;
-  let message = document.querySelector("#message").value;
-  const messageSent = document.querySelector(".message-sent");
+//   let name = document.querySelector("#name").value;
+//   let email = document.querySelector("#email").value;
+//   let subject = document.querySelector("#subject").value;
+//   let message = document.querySelector("#message").value;
+//   const messageSent = document.querySelector(".message-sent");
 
-  try {
-    const res = await fetch(
-      "https://tours-9w4s.onrender.com/api/v1/users/contactUs",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, subject, message }),
-      }
-    );
+//   try {
+//     const res = await fetch(
+//       "https://tours-9w4s.onrender.com/api/v1/users/contactUs",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({ name, email, subject, message }),
+//       }
+//     );
 
-    console.log(res);
-    if (res.status === 201) {
-      messageSent.textContent = "Message sent successfully";
-      messageSent.style.color = "green";
+//     console.log(res);
+//     if (res.status === 201) {
+//       messageSent.textContent = "Message sent successfully";
+//       messageSent.style.color = "green";
 
-      document.querySelector("#name").value =
-        document.querySelector("#email").value =
-        document.querySelector("#subject").value =
-        document.querySelector("#message").value =
-          "";
+//       document.querySelector("#name").value =
+//         document.querySelector("#email").value =
+//         document.querySelector("#subject").value =
+//         document.querySelector("#message").value =
+//           "";
 
-      window.setTimeout(() => {
-        messageSent.textContent = "";
-      }, 5000);
-    } else {
-      messageSent.textContent = "Please provide a valid email and name!";
-      messageSent.style.color = "red";
+//       window.setTimeout(() => {
+//         messageSent.textContent = "";
+//       }, 5000);
+//     } else {
+//       messageSent.textContent = "Please provide a valid email and name!";
+//       messageSent.style.color = "red";
 
-      window.setTimeout(() => {
-        messageSent.textContent = "";
-      }, 5000);
-    }
-  } catch (err) {
-    console.error(err);
-  }
-  document.querySelector("#name").value = "";
-});
+//       window.setTimeout(() => {
+//         messageSent.textContent = "";
+//       }, 5000);
+//     }
+//   } catch (err) {
+//     console.error(err);
+//   }
+//   document.querySelector("#name").value = "";
+// });
