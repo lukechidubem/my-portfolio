@@ -110,7 +110,7 @@ const projects = [
   {
     name: "An E-commerce Aplication",
     img: "images/E-commerce.png",
-    link: "https://lukesecommerce.onrender.com",
+    // link: "https://lukesecommerce.onrender.com",
   },
   {
     name: "Everyday Todo Aplication",
